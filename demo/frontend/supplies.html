@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supplies & Inventory | ReliefCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                RC
+            </div>
+
+            <div>
+                <h2>ReliefCare</h2>
+                <span>Resource Tracker</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="camps.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                Relief Camps
+            </a>
+
+            <a href="supplies.html" class="nav-item active">
+                <span class="nav-icon">▤</span>
+                Supplies
+            </a>
+
+            <a href="families.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                Families
+            </a>
+
+            <a href="distributions.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                Distributions
+            </a>
+
+            <p class="nav-label">ANALYTICS</p>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">◫</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <strong>Need Support?</strong>
+                    <span>Check system activity</span>
+                </div>
+
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Operational
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="breadcrumb">
+                    ReliefCare / Supplies
+                </span>
+
+                <h1>Supplies & Inventory</h1>
+
+                <p>
+                    Record incoming relief supplies and monitor available stock.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="icon-button" title="Notifications">
+                    ♢
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        RC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Camp Administrator</strong>
+
+                        <span>
+                            System Manager
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+        <section class="page-container">
+
+
+            <!-- ADD SUPPLY HEADER -->
+            <div class="glass-card page-title-card">
+
+                <div>
+
+                    <span class="section-label">
+                        RESOURCE MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Log Incoming Supplies
+                    </h2>
+
+                    <p>
+                        Add food, water and blankets received by a relief camp.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUPPLY FORM -->
+            <div class="glass-card form-card">
+
+                <form id="supplyForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- CAMP -->
+                        <div class="form-group">
+
+                            <label for="supplyCamp">
+                                Relief Camp
+                            </label>
+
+                            <select
+                                id="supplyCamp"
+                                name="supplyCamp"
+                                required
+                            >
+
+                                <option value="">
+                                    Select relief camp
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SUPPLY TYPE -->
+                        <div class="form-group">
+
+                            <label for="supplyType">
+                                Supply Type
+                            </label>
+
+                            <select
+                                id="supplyType"
+                                name="supplyType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select supply type
+                                </option>
+
+                                <option value="FOOD">
+                                    Food
+                                </option>
+
+                                <option value="WATER">
+                                    Water
+                                </option>
+
+                                <option value="BLANKETS">
+                                    Blankets
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+                        <div class="form-group">
+
+                            <label for="supplyQuantity">
+                                Quantity
+                            </label>
+
+                            <input
+                                type="number"
+                                id="supplyQuantity"
+                                name="supplyQuantity"
+                                min="1"
+                                placeholder="Enter quantity"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            + Add Supply
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- INVENTORY SECTION -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        CURRENT STOCK
+                    </span>
+
+                    <h2>
+                        Camp Inventory
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAMP SELECTOR -->
+            <div class="glass-card form-card">
+
+                <div class="form-group">
+
+                    <label for="inventoryCamp">
+                        Select Camp
+                    </label>
+
+                    <select id="inventoryCamp">
+
+                        <option value="">
+                            Select a camp to view inventory
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- INVENTORY LIST -->
+            <div
+                class="glass-card dashboard-panel"
+                style="margin-top: 15px;"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            AVAILABLE RESOURCES
+                        </span>
+
+                        <h2>
+                            Current Inventory
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="inventory"
+                    class="inventory-list"
+                >
+
+                    <div class="empty-state">
+
+                        <span>▤</span>
+
+                        <p>
+                            Select a camp to view its inventory.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                © 2026 ReliefCare Resource Tracker
+            </span>
+
+            <span>
+                Disaster Relief Management System
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

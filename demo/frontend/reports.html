@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | ReliefCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                RC
+            </div>
+
+            <div>
+                <h2>ReliefCare</h2>
+                <span>Resource Tracker</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="camps.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                Relief Camps
+            </a>
+
+            <a href="supplies.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                Supplies
+            </a>
+
+            <a href="families.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                Families
+            </a>
+
+            <a href="distributions.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                Distributions
+            </a>
+
+            <p class="nav-label">ANALYTICS</p>
+
+            <a href="reports.html" class="nav-item active">
+                <span class="nav-icon">◫</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <strong>Need Support?</strong>
+                    <span>Check system activity</span>
+                </div>
+
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Operational
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="breadcrumb">
+                    ReliefCare / Reports
+                </span>
+
+                <h1>Reports & Overview</h1>
+
+                <p>
+                    Monitor relief camp activity, residents and available resources.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="icon-button">
+                    ♢
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        RC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Camp Administrator</strong>
+
+                        <span>
+                            System Manager
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+        <section class="page-container">
+
+
+            <!-- HEADER CARD -->
+            <div class="glass-card page-title-card">
+
+                <div>
+
+                    <span class="section-label">
+                        SYSTEM REPORT
+                    </span>
+
+                    <h2>
+                        Relief Camp Summary
+                    </h2>
+
+                    <p>
+                        A quick overview of camps, families and available supplies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+            <div class="report-summary-grid">
+
+
+                <div class="glass-card report-summary-card">
+
+                    <div class="report-icon">
+                        ▣
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE CAMPS
+                        </span>
+
+                        <strong id="reportCampCount">
+                            0
+                        </strong>
+
+                        <p>
+                            Registered relief camps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card report-summary-card">
+
+                    <div class="report-icon">
+                        ♙
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FAMILIES
+                        </span>
+
+                        <strong id="reportFamilyCount">
+                            0
+                        </strong>
+
+                        <p>
+                            Currently registered
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card report-summary-card">
+
+                    <div class="report-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PEOPLE HOUSED
+                        </span>
+
+                        <strong id="reportPeopleCount">
+                            0
+                        </strong>
+
+                        <p>
+                            Residents in camps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card report-summary-card">
+
+                    <div class="report-icon">
+                        ▤
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RESOURCE TYPES
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                        <p>
+                            Food, water and blankets
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESOURCE REPORT -->
+            <div class="glass-card report-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            RESOURCE STATUS
+                        </span>
+
+                        <h2>
+                            Inventory Overview
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-resource-grid">
+
+
+                    <div class="resource-report-item">
+
+                        <div class="resource-report-icon">
+                            F
+                        </div>
+
+                        <div class="resource-report-content">
+
+                            <div class="resource-report-top">
+
+                                <strong>
+                                    Food
+                                </strong>
+
+                                <span id="reportFood">
+                                    0 units
+                                </span>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-bar"
+                                    id="foodProgress"
+                                    style="width: 0%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resource-report-item">
+
+                        <div class="resource-report-icon">
+                            W
+                        </div>
+
+                        <div class="resource-report-content">
+
+                            <div class="resource-report-top">
+
+                                <strong>
+                                    Water
+                                </strong>
+
+                                <span id="reportWater">
+                                    0 units
+                                </span>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-bar"
+                                    id="waterProgress"
+                                    style="width: 0%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resource-report-item">
+
+                        <div class="resource-report-icon">
+                            B
+                        </div>
+
+                        <div class="resource-report-content">
+
+                            <div class="resource-report-top">
+
+                                <strong>
+                                    Blankets
+                                </strong>
+
+                                <span id="reportBlankets">
+                                    0 units
+                                </span>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-bar"
+                                    id="blanketProgress"
+                                    style="width: 0%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- REPORT NOTES -->
+            <div class="report-bottom-grid">
+
+
+                <div class="glass-card report-panel">
+
+                    <span class="section-label">
+                        CAMP MONITORING
+                    </span>
+
+                    <h2>
+                        Capacity Monitoring
+                    </h2>
+
+                    <p class="report-description">
+                        Camp capacity and family registration are managed
+                        through the camp and family modules. The system
+                        prevents registration when available capacity is exceeded.
+                    </p>
+
+                    <a
+                        href="camps.html"
+                        class="secondary-button"
+                    >
+                        View Camps
+                    </a>
+
+                </div>
+
+
+                <div class="glass-card report-panel">
+
+                    <span class="section-label">
+                        SUPPLY MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Inventory Monitoring
+                    </h2>
+
+                    <p class="report-description">
+                        Incoming supplies are added to camp inventory.
+                        Distribution automatically reduces the available
+                        quantity.
+                    </p>
+
+                    <a
+                        href="supplies.html"
+                        class="secondary-button"
+                    >
+                        View Inventory
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                © 2026 ReliefCare Resource Tracker
+            </span>
+
+            <span>
+                Disaster Relief Management System
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

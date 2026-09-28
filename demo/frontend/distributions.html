@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distributions | ReliefCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">RC</div>
+
+            <div>
+                <h2>ReliefCare</h2>
+                <span>Resource Tracker</span>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="camps.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                Relief Camps
+            </a>
+
+            <a href="supplies.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                Supplies
+            </a>
+
+            <a href="families.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                Families
+            </a>
+
+            <a href="distributions.html" class="nav-item active">
+                <span class="nav-icon">⇄</span>
+                Distributions
+            </a>
+
+            <p class="nav-label">ANALYTICS</p>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">◫</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="support-card">
+                <div class="support-icon">?</div>
+
+                <div>
+                    <strong>Need Support?</strong>
+                    <span>Check system activity</span>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Operational
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="breadcrumb">
+                    ReliefCare / Distributions
+                </span>
+
+                <h1>Supply Distribution</h1>
+
+                <p>
+                    Distribute relief supplies to registered families.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="icon-button">
+                    ♢
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        RC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Camp Administrator</strong>
+
+                        <span>System Manager</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE -->
+        <section class="page-container">
+
+
+            <!-- PAGE TITLE -->
+            <div class="glass-card page-title-card">
+
+                <div>
+
+                    <span class="section-label">
+                        RESOURCE DISTRIBUTION
+                    </span>
+
+                    <h2>
+                        Distribute Supplies
+                    </h2>
+
+                    <p>
+                        Select a camp, family and supply to record a distribution.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+            <div class="glass-card form-card">
+
+                <form id="distributionForm">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="distributionCamp">
+                                Relief Camp
+                            </label>
+
+                            <select
+                                id="distributionCamp"
+                                required
+                            >
+
+                                <option value="">
+                                    Select relief camp
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="distributionFamily">
+                                Family
+                            </label>
+
+                            <select
+                                id="distributionFamily"
+                                required
+                            >
+
+                                <option value="">
+                                    Select family
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="distributionType">
+                                Supply Type
+                            </label>
+
+                            <select
+                                id="distributionType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select supply type
+                                </option>
+
+                                <option value="FOOD">
+                                    Food
+                                </option>
+
+                                <option value="WATER">
+                                    Water
+                                </option>
+
+                                <option value="BLANKETS">
+                                    Blankets
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="distributionQuantity">
+                                Quantity
+                            </label>
+
+                            <input
+                                type="number"
+                                id="distributionQuantity"
+                                min="1"
+                                placeholder="Enter quantity"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            ⇄ Distribute Supply
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- QUICK INFO -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SYSTEM INFORMATION
+                    </span>
+
+                    <h2>
+                        Distribution Overview
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="distribution-info-grid">
+
+
+                <div class="glass-card info-card">
+
+                    <div class="info-icon">
+                        ▤
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SUPPLY TYPES
+                        </span>
+
+                        <h3>
+                            3
+                        </h3>
+
+                        <p>
+                            Food, Water & Blankets
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card info-card">
+
+                    <div class="info-icon">
+                        ⇄
+                    </div>
+
+                    <div>
+
+                        <span>
+                            INVENTORY
+                        </span>
+
+                        <h3>
+                            LIVE
+                        </h3>
+
+                        <p>
+                            Updated after distribution
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card info-card">
+
+                    <div class="info-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            VALIDATION
+                        </span>
+
+                        <h3>
+                            ACTIVE
+                        </h3>
+
+                        <p>
+                            Prevents excess distribution
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROCESS -->
+            <div class="glass-card process-card">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            DISTRIBUTION PROCESS
+                        </span>
+
+                        <h2>
+                            How It Works
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Select Camp
+                            </h3>
+
+                            <p>
+                                Choose the relief camp.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Select Family
+                            </h3>
+
+                            <p>
+                                Choose a registered family.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Distribute
+                            </h3>
+
+                            <p>
+                                Select supply and quantity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                © 2026 ReliefCare Resource Tracker
+            </span>
+
+            <span>
+                Disaster Relief Management System
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Families | ReliefCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                RC
+            </div>
+
+            <div>
+                <h2>ReliefCare</h2>
+                <span>Resource Tracker</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="camps.html" class="nav-item">
+                <span class="nav-icon">▣</span>
+                Relief Camps
+            </a>
+
+            <a href="supplies.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                Supplies
+            </a>
+
+            <a href="families.html" class="nav-item active">
+                <span class="nav-icon">♙</span>
+                Families
+            </a>
+
+            <a href="distributions.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                Distributions
+            </a>
+
+            <p class="nav-label">ANALYTICS</p>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">◫</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <strong>Need Support?</strong>
+                    <span>Check system activity</span>
+                </div>
+
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Operational
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="breadcrumb">
+                    ReliefCare / Families
+                </span>
+
+                <h1>Family Management</h1>
+
+                <p>
+                    Register families checking into relief camps and monitor residents.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="icon-button" title="Notifications">
+                    ♢
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        RC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Camp Administrator</strong>
+
+                        <span>
+                            System Manager
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE -->
+        <section class="page-container">
+
+
+            <!-- TITLE -->
+            <div class="glass-card page-title-card">
+
+                <div>
+
+                    <span class="section-label">
+                        FAMILY REGISTRATION
+                    </span>
+
+                    <h2>
+                        Check In Family
+                    </h2>
+
+                    <p>
+                        Register a family and record the number of people
+                        staying at the selected relief camp.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAMILY FORM -->
+            <div class="glass-card form-card">
+
+                <form id="familyForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- CAMP -->
+                        <div class="form-group">
+
+                            <label for="familyCamp">
+                                Relief Camp
+                            </label>
+
+                            <select
+                                id="familyCamp"
+                                name="familyCamp"
+                                required
+                            >
+
+                                <option value="">
+                                    Select relief camp
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- FAMILY NAME -->
+                        <div class="form-group">
+
+                            <label for="familyName">
+                                Family Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="familyName"
+                                name="familyName"
+                                placeholder="Enter family name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- HEAD COUNT -->
+                        <div class="form-group">
+
+                            <label for="headCount">
+                                Number of People
+                            </label>
+
+                            <input
+                                type="number"
+                                id="headCount"
+                                name="headCount"
+                                min="1"
+                                placeholder="Enter number of people"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            + Check In Family
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- CURRENT FAMILIES -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        CURRENT RESIDENTS
+                    </span>
+
+                    <h2>
+                        Families Currently Housed
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAMP FILTER -->
+            <div class="glass-card form-card">
+
+                <div class="form-group">
+
+                    <label for="familyViewCamp">
+                        Select Camp
+                    </label>
+
+                    <select id="familyViewCamp">
+
+                        <option value="">
+                            Select a camp to view families
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAMILY TABLE -->
+            <div
+                class="glass-card table-card"
+                style="margin-top: 15px;"
+            >
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                FAMILY
+                            </th>
+
+                            <th>
+                                PEOPLE
+                            </th>
+
+                            <th>
+                                CAMP
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="familyTable">
+
+                        <tr>
+
+                            <td colspan="3">
+
+                                <div class="empty-state">
+
+                                    <span>♙</span>
+
+                                    <p>
+                                        Select a camp to view registered families.
+                                    </p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                © 2026 ReliefCare Resource Tracker
+            </span>
+
+            <span>
+                Disaster Relief Management System
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

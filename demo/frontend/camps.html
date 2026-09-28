@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relief Camps | ReliefCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                RC
+            </div>
+
+            <div>
+                <h2>ReliefCare</h2>
+                <span>Resource Tracker</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">MAIN MENU</p>
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="camps.html" class="nav-item active">
+                <span class="nav-icon">▣</span>
+                Relief Camps
+            </a>
+
+            <a href="supplies.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                Supplies
+            </a>
+
+            <a href="families.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                Families
+            </a>
+
+            <a href="distributions.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                Distributions
+            </a>
+
+            <p class="nav-label">ANALYTICS</p>
+
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">◫</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <strong>Need Support?</strong>
+                    <span>Check system activity</span>
+                </div>
+
+            </div>
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                System Operational
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="breadcrumb">
+                    ReliefCare / Relief Camps
+                </span>
+
+                <h1>Relief Camp Management</h1>
+
+                <p>
+                    Register camps and monitor their available capacity.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="icon-button" title="Notifications">
+                    ♢
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        RC
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Camp Administrator</strong>
+
+                        <span>
+                            System Manager
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE -->
+        <section class="page-container">
+
+
+            <!-- PAGE TITLE -->
+            <div class="glass-card page-title-card">
+
+                <div>
+
+                    <span class="section-label">
+                        CAMP MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Register Relief Camp
+                    </h2>
+
+                    <p>
+                        Add a new disaster relief camp with its location
+                        and maximum accommodation capacity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAMP FORM -->
+            <div class="glass-card form-card">
+
+                <form id="campForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- CAMP NAME -->
+                        <div class="form-group">
+
+                            <label for="campName">
+                                Camp Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="campName"
+                                name="campName"
+                                placeholder="Enter camp name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+                        <div class="form-group">
+
+                            <label for="campLocation">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="campLocation"
+                                name="campLocation"
+                                placeholder="Enter camp location"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CAPACITY -->
+                        <div class="form-group">
+
+                            <label for="campCapacity">
+                                Maximum Capacity
+                            </label>
+
+                            <input
+                                type="number"
+                                id="campCapacity"
+                                name="campCapacity"
+                                min="1"
+                                placeholder="Enter maximum people"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            + Register Camp
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- CAMP LIST -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        REGISTERED CAMPS
+                    </span>
+
+                    <h2>
+                        Current Relief Camps
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card table-card">
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                CAMP
+                            </th>
+
+                            <th>
+                                LOCATION
+                            </th>
+
+                            <th>
+                                CAPACITY
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="campTable">
+
+                        <tr>
+
+                            <td colspan="4">
+
+                                <div class="empty-state">
+
+                                    <span>▣</span>
+
+                                    <p>
+                                        No relief camps available.
+                                    </p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <span>
+                © 2026 ReliefCare Resource Tracker
+            </span>
+
+            <span>
+                Disaster Relief Management System
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
